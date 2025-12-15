@@ -1,11 +1,11 @@
-"use client";
-import Header from "@/app/components/ui/Header";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
+'use client';
+import Header from '@/app/components/admin/Header';
 import clientes from '@/public/clientes-adm.png';
 import compras from '@/public/compras-adm.png';
 import desempenho from '@/public/desempenho-adm.png';
 import usuarios from '@/public/usuarios-adm.png';
+import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 export default function AdminDashboard() {
   const router = useRouter();
 
@@ -20,16 +20,8 @@ export default function AdminDashboard() {
       <div className="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 gap-10">
         {/* CARD 1 */}
         <div className="bg-white border border-black shadow-md rounded-lg p-10 text-center cursor-pointer hover:shadow-xl transition-all">
-          <Image
-            src={compras}
-            width={80}
-            height={80}
-            alt="Status Geral"
-            className="mx-auto mb-6"
-          />
-          <p className="text-lg font-semibold text-red-600">
-            1. Status Geral das Compras
-          </p>
+          <Image src={compras} width={80} height={80} alt="Status Geral" className="mx-auto mb-6" />
+          <p className="text-lg font-semibold text-red-600">1. Status Geral das Compras</p>
         </div>
 
         {/* CARD 2 */}
@@ -68,9 +60,7 @@ export default function AdminDashboard() {
             alt="Gestão dos Usuários"
             className="mx-auto mb-6"
           />
-          <p className="text-lg font-semibold text-red-600">
-            4. Gestão dos Usuários
-          </p>
+          <p className="text-lg font-semibold text-red-600">4. Gestão dos Usuários</p>
         </div>
       </div>
     </div>

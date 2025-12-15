@@ -1,6 +1,8 @@
  import Image from "next/image"
 import CarB from '@/public/CarB.jpeg';
+import { useRouter } from "next/navigation";
 export default function TopCard() {
+  const router = useRouter();
   return (
     <div className="max-w-6xl mx-auto px-4 mt-6 flex gap-6 items-start justify-center">
      <div className="col-span-2 bg-white rounded-lg border p-6 shadow-sm w-full flex">
@@ -21,8 +23,8 @@ export default function TopCard() {
           </div>
         </div>
         <div className="flex gap-2">
-          <button className="bg-red-600 text-white px-4 py-4 rounded h-[8vh]">Gestão</button>
-          <button className="bg-gray-800 text-white px-4 py-2 rounded h-[8vh]">Financiamento</button>
+          <button className="bg-red-600 text-white px-4 py-4 rounded h-[8vh]"  onClick={() => router.push('/user/gestao')}>Gestão</button>
+          <button className="bg-gray-800 text-white px-4 py-2 rounded h-[8vh]"  onClick={() => router.push('/user/financiamento')}>Financiamento</button>
         </div>
 
       </div>
